@@ -13,6 +13,8 @@ with open(sys.argv[1], 'r') as fh:
         if len(lines) > 2:
             fails = True
             print("Line %i too long: %s" % (i, line.strip()))
+        if any(len(l)>26 for l in lines):
+            print("Line %i cannot be word-wrapped: %s" % (i, line.strip()))
 
 if fails:
     sys.exit(1)
