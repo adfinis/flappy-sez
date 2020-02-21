@@ -11,5 +11,5 @@ hunter2
 git push -f master
 git push -f stands for friday
 i herd u liek fallblatt
-flappy sez: need more flappy text!
+flappy sez need more flappy text
 i like to flap it flap it
