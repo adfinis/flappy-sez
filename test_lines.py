@@ -12,9 +12,9 @@ with open(sys.argv[1], 'r') as fh:
         lines = textwrap.wrap(text, 26)
         if len(lines) > 2:
             fails = True
-            print("Line %i too long: %s" % (i, line.strip()))
+            print("Line %i too long: %s" % (i+1, line.strip()))
         if any(len(l)>26 for l in lines):
-            print("Line %i cannot be word-wrapped: %s" % (i, line.strip()))
+            print("Line %i cannot be word-wrapped: %s" % (i+1, line.strip()))
 
 if fails:
     sys.exit(1)
