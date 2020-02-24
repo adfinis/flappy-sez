@@ -4,7 +4,7 @@ import sys
 import string
 import textwrap
 
-DATE_PLACEHOLDER = "XXX DD.MM"
+DATE_PLACEHOLDER = "XXX DD.MM."
 ALLOWED_CHARACTERS = set(string.ascii_letters + string.digits + " " + "." + "/" + "-")
 
 fails = False

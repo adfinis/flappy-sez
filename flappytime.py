@@ -7,7 +7,7 @@ from datetime import datetime
 
 FLAPPY_DATA="https://raw.githubusercontent.com/adfinis-sygroup/flappy-sez/master/flappy.txt"
 
-now = datetime.now().strftime('%a %d.%m')
+now = datetime.now().strftime('%a %d.%m.')
 
 lines = requests.get(FLAPPY_DATA).content.decode('utf-8').splitlines()
 
