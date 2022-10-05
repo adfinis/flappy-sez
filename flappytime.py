@@ -7,7 +7,7 @@ import random
 from datetime import datetime
 
 
-FLAPPY_DATA="https://raw.githubusercontent.com/adfinis-sygroup/flappy-sez/master/flappy.txt"
+FLAPPY_DATA = "https://raw.githubusercontent.com/adfinis/flappy-sez/main/flappy.txt"
 
 MSG_CACHE_FILE = '/tmp/flappytime.txt'
 
@@ -23,12 +23,13 @@ Here's some more options you can use:
 
 
 * `--help` - show help
-* `--debug` - start a debugger 
+* `--debug` - start a debugger
 * `--pretend` - don't actually do anything
 * `--force` - set message even if the currently displayed message is not ours
 
 
 """
+
 
 def new_message():
     lines = requests.get(FLAPPY_DATA).content.decode('utf-8').splitlines()
@@ -50,7 +51,7 @@ def send_message(message):
         return
 
     requests.get(
-        "http://flappy.syfinis.ch:8089/set-text/%s" % message
+        "http://localhost:8089/set-text/%s" % message
     )
     with open(MSG_CACHE_FILE, 'w') as fh:
         fh.write(message)
@@ -59,10 +60,10 @@ def send_message(message):
 def is_own_message():
     """Return true if flappy is currently showing our own message"""
 
-    current_msg = requests.get('http://flappy.syfinis.ch:8089/get-text').content.decode('utf-8').strip()
+    current_msg = requests.get('http://localhost:8089/get-text').content.decode('utf-8').strip()
     try:
         with open(MSG_CACHE_FILE, "r") as fh:
-            return fh.read().strip()  == current_msg
+            return fh.read().strip() == current_msg
     except FileNotFoundError:
         # tmp file gone?
         return False
@@ -73,7 +74,7 @@ def lights_off():
         print("Pretending: lights off")
         return
     requests.get(
-        "http://flappy.syfinis.ch/api/v1/light-off"
+            "http://localhost:8089/light-off"
     )
 
 
