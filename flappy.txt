@@ -9,7 +9,7 @@ go cloud yourself
 y tho
 y u no...
 hunter2
-git push -f master
+git push -f main
 git push -f stands for friday
 i herd u liek fallblatt
 flappy sez need more flappy text
