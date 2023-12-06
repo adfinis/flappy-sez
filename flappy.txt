@@ -52,10 +52,10 @@ where the lunkis roam
 archur in da house
 xml reigns
 counting white spaces
-australia the netherlands germany switzerland tour
-brisbane amsterdam basel bern zurich munich tour
-we like to code it code it we like to code it code it
-continuous coffee tea mate cola deployment
+aus ger ned che tour
+ams bne brn bsl muc zrh tour
+we like to code it code it
+continuous cola coffee tea mate deployment
 get gitopsed
 1up 2up
 it was dns
