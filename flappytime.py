@@ -88,6 +88,7 @@ if __name__ == "__main__":
         # we can overwrite: forced or own message
         send_message(formatted_message)
 
-    if datetime.now().weekday() in (5, 6):
+    if datetime.now().weekday() in (5, 6) or datetime.now().hour >= 19:
         # on weekends, light should be turned off
+        # after 19:00 light should be turned off
         lights_off()
