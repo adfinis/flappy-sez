@@ -90,3 +90,4 @@ im going to need a bigger flowchart
 you are staring at me
 dont be lasagna
 danger will robinson
+important aws tokens dot txt
